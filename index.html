@@ -21,14 +21,16 @@ body {
     justify-content: center;
 }
 
+/* 핵심: 크기 제한 + 16:9 유지 */
 .player-wrap {
     position: relative;
-    width: 100vw;
-    max-width: 100vw;
+    width: 100%;
+    max-width: 900px; /* 여기서 크기 조절 가능 */
     aspect-ratio: 16 / 9;
     background: black;
 }
 
+/* iframe을 정확히 꽉 채움 */
 iframe {
     position: absolute;
     inset: 0;
@@ -40,6 +42,7 @@ iframe {
 </head>
 
 <body>
+
 <div class="player-wrap">
     <iframe id="player"
             title="youtube-player"
@@ -69,5 +72,6 @@ if (id) {
     document.body.innerHTML = "<div style='color:white;font-family:sans-serif;padding:20px;'>No video ID</div>";
 }
 </script>
+
 </body>
 </html>
