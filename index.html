@@ -39,12 +39,14 @@ if (id) {
     const origin = window.location.origin;
 
     document.getElementById("player").src =
-        "https://www.youtube.com/embed/" + id +
-        "?controls=1" +
-        "&playsinline=1" +
-        "&rel=0" +
-        "&enablejsapi=1" +
-        "&origin=" + encodeURIComponent(origin);
+      "https://www.youtube.com/embed/" + id +
+"?autoplay=1" +
+"&mute=1" +
+"&controls=1" +
+"&playsinline=1" +
+"&rel=0" +
+"&enablejsapi=1" +
+"&origin=" + encodeURIComponent(origin);
 } else {
     document.body.innerHTML = "<div style='color:white;font-family:sans-serif;padding:20px;'>No video ID</div>";
 }
